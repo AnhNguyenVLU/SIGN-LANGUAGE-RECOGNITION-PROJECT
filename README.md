@@ -32,7 +32,7 @@
 - [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) — Mô hình **phát hiện ký hiệu tay (A–Z)** theo thời gian thực, dùng để phân loại cử chỉ ngôn ngữ ký hiệu.
   
 - [OpenCV](https://opencv.org/) — Thư viện **xử lý ảnh/video**, dùng để truy cập camera, vẽ bounding box, hiển thị HUD và quản lý khung hình theo thời gian thực.
-- 
+  
 - [NumPy](https://numpy.org/) — Hỗ trợ **tính toán ma trận và mảng số học**, phục vụ cho xử lý đầu ra từ YOLO.
   
 - [Argparse](https://docs.python.org/3/library/argparse.html) — Dùng để **xử lý tham số dòng lệnh**, hỗ trợ truyền các tùy chọn như model path, camera index, threshold,…
@@ -43,4 +43,16 @@
 
 - [Time / Datetime](https://docs.python.org/3/library/time.html) — Dùng để **đồng bộ thời gian thực** khi xử lý khung hình và chèn dấu cách giữa các ký tự.
   
-- Python 3.8 – 3.11 — Phiên bản tương thích khuyến nghị cho môi trường chạy.  
+- Python 3.8 – 3.11 — Phiên bản tương thích khuyến nghị cho môi trường chạy.
+
+## Tương tác của người dùng 
+  
+| **Hành động / Phím tắt** | **Mô tả** |
+|----------------------------|------------|
+| **Giữ chuột trái + kéo** | Chỉnh vị trí vùng hoặc vạch kiểm tra trực tiếp trên video (nếu mở rộng thêm tính năng). |
+| **BACKSPACE** | Xóa ký tự cuối cùng trong chuỗi hiện tại. |
+| **SPACE** | Thêm một khoảng trắng vào chuỗi ký tự. |
+| **ENTER** | In kết quả hiện tại ra console và lưu vào tệp **`output.txt`**. |
+| **C** | Xóa toàn bộ chuỗi ký tự đã ghi. |
+| **Q / ESC** | Thoát chương trình một cách an toàn. |
+

@@ -56,3 +56,8 @@
 | **C** | Xóa toàn bộ chuỗi ký tự đã ghi. |
 | **Q / ESC** | Thoát chương trình một cách an toàn. |
 
+## Chạy code
+
+1. Pip install - r requirements.txt
+2.  Python Main.py
+

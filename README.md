@@ -61,3 +61,14 @@
 1. Pip install - r requirements.txt
 2.  Python Main.py
 
+## Cấu trúc dữ liệu đầu ra:
+
+| **Thành phần** | **Mô tả** |
+|-----------------|------------|
+| **output.txt** | Lưu toàn bộ chuỗi ký tự hoặc câu được tạo từ các ký hiệu tay. |
+| **Live Display (HUD)** | Hiển thị thông tin thời gian thực: ký tự hiện tại, ký tự làm mượt, FPS và chuỗi đang hình thành. |
+| **Console Output** | In ra chuỗi kết quả mỗi khi nhấn **ENTER**, đồng thời xác nhận đã lưu vào file. |
+
+<img width="1305" height="726" alt="image" src="https://github.com/user-attachments/assets/36cf0179-188a-406f-8b30-76c742868e16" />
+
+---

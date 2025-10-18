@@ -26,3 +26,21 @@
 | **HUD Display** | Hiển thị trực tiếp thông tin nhận dạng lên video gồm: ký tự hiện tại, ký tự đã làm mượt, FPS và chuỗi từ đang hình thành. | Giao diện trực quan thời gian thực trên màn hình video. |  
 | **Keyboard Control** | Hỗ trợ phím tắt: **Backspace**, **Space**, **Enter**, **C**, **Q/ESC** để xóa, thêm dấu cách, lưu hoặc thoát chương trình. | Tương tác trực tiếp qua bàn phím khi chạy video. |  
 | **Output Writer** | Lưu kết quả nhận dạng cuối cùng vào tệp **`output.txt`** để phục vụ huấn luyện hoặc phân tích sau này. | Chuỗi ký tự hoàn chỉnh được ghi ra file văn bản. |  
+
+## Công nghệ sử dụng
+
+- [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) — Mô hình **phát hiện ký hiệu tay (A–Z)** theo thời gian thực, dùng để phân loại cử chỉ ngôn ngữ ký hiệu.
+  
+- [OpenCV](https://opencv.org/) — Thư viện **xử lý ảnh/video**, dùng để truy cập camera, vẽ bounding box, hiển thị HUD và quản lý khung hình theo thời gian thực.
+- 
+- [NumPy](https://numpy.org/) — Hỗ trợ **tính toán ma trận và mảng số học**, phục vụ cho xử lý đầu ra từ YOLO.
+  
+- [Argparse](https://docs.python.org/3/library/argparse.html) — Dùng để **xử lý tham số dòng lệnh**, hỗ trợ truyền các tùy chọn như model path, camera index, threshold,…
+  
+- [Collections (Deque, Counter)](https://docs.python.org/3/library/collections.html) — Dùng cho **làm mượt thời gian** và đếm nhãn xuất hiện theo cửa sổ trượt.
+   
+- [Typing](https://docs.python.org/3/library/typing.html) — Sử dụng **type hints** để tăng khả năng đọc và bảo trì mã nguồn.
+
+- [Time / Datetime](https://docs.python.org/3/library/time.html) — Dùng để **đồng bộ thời gian thực** khi xử lý khung hình và chèn dấu cách giữa các ký tự.
+  
+- Python 3.8 – 3.11 — Phiên bản tương thích khuyến nghị cho môi trường chạy.  

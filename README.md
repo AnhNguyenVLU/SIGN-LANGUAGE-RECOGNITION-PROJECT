@@ -15,3 +15,14 @@
 - Hỗ trợ tương tác bàn phím để xóa, thêm khoảng trắng, làm mới hoặc lưu kết quả nhận dạng.
 
 - Tự động ghi kết quả nhận dạng vào tệp output.txt phục vụ cho việc lưu trữ, huấn luyện hoặc phân tích sau này.
+
+## Tổng quan dự án 
+
+| **Thành phần** | **Mô tả** | **Đầu ra** |  
+|------------------|--------------------|----------------|  
+| **YOLO Detector** | Mô hình **Ultralytics YOLO** nhận dạng ký hiệu tay (A–Z) theo thời gian thực từ camera. | Ký tự được phát hiện cùng độ tin cậy (confidence) và khung phát hiện (bounding box). |  
+| **TemporalSmoother** | Làm mượt nhãn theo **cửa sổ trượt** bằng thuật toán **Majority Vote + Confidence Threshold** để giảm nhiễu giữa các khung hình. | Nhãn ký tự ổn định hoặc “BLANK” nếu chưa đủ tin cậy. |  
+| **CharAggregator** | Quy tắc **ghép ký tự theo thời gian**: chỉ chốt khi nhãn ổn định liên tiếp K khung hình, tự chèn khoảng trắng nếu im lặng đủ lâu. | Chuỗi ký tự ổn định mô phỏng từ/câu được tạo từ các ký hiệu tay. |  
+| **HUD Display** | Hiển thị trực tiếp thông tin nhận dạng lên video gồm: ký tự hiện tại, ký tự đã làm mượt, FPS và chuỗi từ đang hình thành. | Giao diện trực quan thời gian thực trên màn hình video. |  
+| **Keyboard Control** | Hỗ trợ phím tắt: **Backspace**, **Space**, **Enter**, **C**, **Q/ESC** để xóa, thêm dấu cách, lưu hoặc thoát chương trình. | Tương tác trực tiếp qua bàn phím khi chạy video. |  
+| **Output Writer** | Lưu kết quả nhận dạng cuối cùng vào tệp **`output.txt`** để phục vụ huấn luyện hoặc phân tích sau này. | Chuỗi ký tự hoàn chỉnh được ghi ra file văn bản. |  
